@@ -24,7 +24,9 @@ df.columns
 # In[4]:
 
 
-df.rename(columns={'EXITS                                                               ':'EXITS'}, inplace=True)
+# rather than : df.rename(columns={'EXITS                                                               ':'EXITS'}, inplace=True)
+
+df.columns = df.columns.str.strip() #I guess better
 
 
 # In[5]:
